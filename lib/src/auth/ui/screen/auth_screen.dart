@@ -5,6 +5,6 @@ class AuthScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Text('Auth Screen');
+    return const Text('Auth Screen');
   }
 }

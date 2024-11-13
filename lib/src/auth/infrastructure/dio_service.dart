@@ -1,6 +1,6 @@
 import 'package:dio/dio.dart';
 
-import 'auth_storage.dart';
+import 'package:worksheet/src/auth/infrastructure/auth_storage.dart';
 
 class DioService {
 

@@ -27,5 +27,5 @@ class AppRoute{
 
 
 extension ClenSlash on String{
-  toNameRoute()=> replaceAll("/", "");
+  String toNameRoute()=> replaceAll("/", "");
 }

@@ -15,7 +15,7 @@ Future<void> setPreference(String key, dynamic value) async {
 }
 
 /// Get a Object type data.
-getPreference(String key) {
+dynamic getPreference(String key) {
   // See note above
   if (!Preferences.isInitialized) throw "Preferences not initialized";
   //log.d("getPreference ${key.name}");
@@ -45,7 +45,7 @@ Future<void> updateJsonPreference(KeyPref key, Map<String, dynamic> mapData) asy
   await Preferences._setStringByName(key.name, jsonEncode(currentJson));
 }
 
-getJsonPreference(KeyPref key) {
+dynamic getJsonPreference(KeyPref key) {
   // See note above
   if (!Preferences.isInitialized) throw "Preferences not initialized";
 
@@ -106,13 +106,13 @@ class Preferences {
     }
   }
 
-  static _get(String key) => _pref.get(key);
+  static Object? _get(String key) => _pref.get(key);
 
   static Future<void> _setStringByName(String key, String value) async {
     await _pref.setString(key, value);
   }
 
-  static _getStringByName(String string) => _pref.getString(string);
+  static String? _getStringByName(String string) => _pref.getString(string);
 }
 
 enum KeyPref { profile, companyId, employeeInfoForm }

@@ -79,14 +79,14 @@ class _LoginViewState extends State<LoginView> {
                   height: 10,
                 ),
                 ElevatedButton(
-                  child: Text(
-                    "Inciiar Sesíon",
-                    style: TextStyle(color: Colors.white),
-                  ),
-                  style: ButtonStyle(
+                  style: const ButtonStyle(
                       backgroundColor:
                           WidgetStatePropertyAll<Color>(Colors.indigo)),
                   onPressed: () {},
+                  child: const Text(
+                    "Inciiar Sesíon",
+                    style: TextStyle(color: Colors.white),
+                  ),
                 ),
                 const SizedBox(
                   height: 10,
@@ -94,7 +94,7 @@ class _LoginViewState extends State<LoginView> {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Text("¿No tienes una cuenta?"),
+                    const Text("¿No tienes una cuenta?"),
                     TextButton(
                       onPressed: () {},
                       child: const Text(

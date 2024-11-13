@@ -71,14 +71,14 @@ class _UpdatePasswordViewState extends State<UpdatePasswordView> {
                   height: 20,
                 ),
                 ElevatedButton(
-                  child: Text(
-                    "Cambiar contraseña",
-                    style: TextStyle(color: Colors.white),
-                  ),
-                  style: ButtonStyle(
+                  style: const ButtonStyle(
                       backgroundColor:
                       WidgetStatePropertyAll<Color>(Colors.indigo)),
                   onPressed: () {},
+                  child: const Text(
+                    "Cambiar contraseña",
+                    style: TextStyle(color: Colors.white),
+                  ),
                 ),
                 const SizedBox(
                   height: 10,
@@ -88,11 +88,11 @@ class _UpdatePasswordViewState extends State<UpdatePasswordView> {
                   children: [
                     TextButton.icon(
                       onPressed: () {},
-                      icon: Icon(
+                      icon: const Icon(
                         Icons.arrow_back,
                         color: Colors.indigo,
                       ),
-                      label: Text(
+                      label: const Text(
                         "Volver al inicio de sesión",
                         style: TextStyle(color: Colors.indigo),
                       ),

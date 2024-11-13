@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:info_label/info_label.dart';
 import 'package:worksheet/src/common/ui/widget/text_field_value_widget.dart';
 
 class PasswordRecoveryView extends StatelessWidget {
@@ -8,13 +7,13 @@ class PasswordRecoveryView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ConstrainedBox(
-      constraints: BoxConstraints(
+      constraints: const BoxConstraints(
         maxWidth: 500,
         minWidth: 200,
       ),
       child: Card(
         elevation: 5,
-        margin: EdgeInsets.all(10),
+        margin: const EdgeInsets.all(10),
         child: Form(
           child: Padding(
             padding: const EdgeInsets.all(20.0),
@@ -22,11 +21,11 @@ class PasswordRecoveryView extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                Icon(
+                const Icon(
                   Icons.energy_savings_leaf_sharp,
                   size: 100,
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 10,
                 ),
                 Text(
@@ -50,14 +49,14 @@ class PasswordRecoveryView extends StatelessWidget {
                   height: 10,
                 ),
                 ElevatedButton(
-                  child: Text(
-                    "Enviar instrucciones",
-                    style: TextStyle(color: Colors.white),
-                  ),
-                  style: ButtonStyle(
+                  style: const ButtonStyle(
                       backgroundColor:
                           WidgetStatePropertyAll<Color>(Colors.indigo)),
                   onPressed: () {},
+                  child: const Text(
+                    "Enviar instrucciones",
+                    style: TextStyle(color: Colors.white),
+                  ),
                 ),
                 const SizedBox(
                   height: 10,
@@ -67,7 +66,7 @@ class PasswordRecoveryView extends StatelessWidget {
                     color: Colors.grey[300],
                     borderRadius: BorderRadius.circular(5),
                   ),
-                  child: ListTile(
+                  child: const ListTile(
                     title: Text("Recibirás un correo con:"),
                     subtitle: Column(
                       children: [
@@ -92,11 +91,11 @@ class PasswordRecoveryView extends StatelessWidget {
                   children: [
                     TextButton.icon(
                       onPressed: () {},
-                      icon: Icon(
+                      icon: const Icon(
                         Icons.arrow_back,
                         color: Colors.indigo,
                       ),
-                      label: Text(
+                      label: const Text(
                         "Volver al inicio de sesión",
                         style: TextStyle(color: Colors.indigo),
                       ),
@@ -115,25 +114,25 @@ class PasswordRecoveryView extends StatelessWidget {
 class _RowDotAndText extends StatelessWidget {
   final String label;
 
-  const _RowDotAndText({super.key, required this.label});
+  const _RowDotAndText({required this.label});
 
   @override
   Widget build(BuildContext context) {
     return Row(
       children: [
-        SizedBox(
+        const SizedBox(
           width: 5,
         ),
         const Icon(
           Icons.circle,
           size: 5,
         ),
-        SizedBox(
+        const SizedBox(
           width: 10,
         ),
         Text(
           label,
-          style: TextStyle(fontSize: 12),
+          style: const TextStyle(fontSize: 12),
         )
       ],
     );

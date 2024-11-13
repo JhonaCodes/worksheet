@@ -23,7 +23,7 @@ class _SignupViewState extends State<SignupView> {
       child: Card(
         elevation: 5,
         child: Padding(
-          padding: EdgeInsets.all(10),
+          padding: const EdgeInsets.all(10),
           child: Form(
             child: Padding(
               padding: const EdgeInsets.all(20.0),
