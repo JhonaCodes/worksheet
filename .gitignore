@@ -27,9 +27,16 @@ migrate_working_dir/
 .dart_tool/
 .flutter-plugins
 .flutter-plugins-dependencies
+.env
+.env.dev
+.env.prod
+generate_language.sh
+codemagic.yaml
+
 .pub-cache/
 .pub/
 /build/
+lib/env/env.g.dart
 
 # Symbolication related
 app.*.symbols
