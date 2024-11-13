@@ -9,12 +9,12 @@ class PasswordRecoveryView extends StatelessWidget {
   Widget build(BuildContext context) {
     return ConstrainedBox(
       constraints: BoxConstraints(
-          maxWidth: 500,
-          minWidth: 200,
-
+        maxWidth: 500,
+        minWidth: 200,
       ),
       child: Card(
-      margin: EdgeInsets.all(10),
+        elevation: 5,
+        margin: EdgeInsets.all(10),
         child: Form(
           child: Padding(
             padding: const EdgeInsets.all(20.0),
@@ -22,12 +22,18 @@ class PasswordRecoveryView extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                Icon(Icons.energy_savings_leaf_sharp, size: 100,),
-                SizedBox(height: 10,),
-                Text("Recuperar contraseña",
+                Icon(
+                  Icons.energy_savings_leaf_sharp,
+                  size: 100,
+                ),
+                SizedBox(
+                  height: 10,
+                ),
+                Text(
+                  "Recuperar contraseña",
                   style: Theme.of(context).textTheme.headlineMedium?.copyWith(
-                    fontWeight: FontWeight.w900,
-                  ),
+                        fontWeight: FontWeight.w900,
+                      ),
                 ),
                 Text(
                   "Ingresa tu correo electrónico y te enviaremos las instrucciones para recuperar tu contraseña",
@@ -40,18 +46,22 @@ class PasswordRecoveryView extends StatelessWidget {
                   hintText: "Correo electrónico",
                   maxLines: 1,
                 ),
-
-                const SizedBox(height: 10,),
-
-                ElevatedButton(
-                  child: Text("Enviar instrucciones", style: TextStyle(color: Colors.white),),
-                  style: ButtonStyle(
-                      backgroundColor: WidgetStatePropertyAll<Color>(Colors.indigo)
-                  ),
-                  onPressed: (){},
+                const SizedBox(
+                  height: 10,
                 ),
-
-                const SizedBox(height: 10,),
+                ElevatedButton(
+                  child: Text(
+                    "Enviar instrucciones",
+                    style: TextStyle(color: Colors.white),
+                  ),
+                  style: ButtonStyle(
+                      backgroundColor:
+                          WidgetStatePropertyAll<Color>(Colors.indigo)),
+                  onPressed: () {},
+                ),
+                const SizedBox(
+                  height: 10,
+                ),
                 DecoratedBox(
                   decoration: BoxDecoration(
                     color: Colors.grey[300],
@@ -64,31 +74,35 @@ class PasswordRecoveryView extends StatelessWidget {
                         _RowDotAndText(
                           label: "Link para restablecer tu contraseña",
                         ),
-
                         _RowDotAndText(
                           label: "Instrucciones detalladas",
                         ),
-
                         _RowDotAndText(
                           label: "Contacto de soporte si lo necesitas",
                         ),
-
                       ],
                     ),
                   ),
                 ),
-                const SizedBox(height: 10,),
+                const SizedBox(
+                  height: 10,
+                ),
                 Row(
-                mainAxisAlignment: MainAxisAlignment.center,
+                  mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     TextButton.icon(
-                      onPressed: (){},
-                      icon: Icon(Icons.arrow_back, color: Colors.indigo,),
-                      label: Text("Volver al inicio de sesión", style: TextStyle(color: Colors.indigo),),
+                      onPressed: () {},
+                      icon: Icon(
+                        Icons.arrow_back,
+                        color: Colors.indigo,
+                      ),
+                      label: Text(
+                        "Volver al inicio de sesión",
+                        style: TextStyle(color: Colors.indigo),
+                      ),
                     )
                   ],
                 )
-
               ],
             ),
           ),
@@ -100,18 +114,28 @@ class PasswordRecoveryView extends StatelessWidget {
 
 class _RowDotAndText extends StatelessWidget {
   final String label;
+
   const _RowDotAndText({super.key, required this.label});
 
   @override
   Widget build(BuildContext context) {
     return Row(
       children: [
-        SizedBox(width: 5,),
-        const Icon(Icons.circle, size: 5,),
-        SizedBox(width: 10,),
-        Text(label, style: TextStyle(fontSize: 12),)
+        SizedBox(
+          width: 5,
+        ),
+        const Icon(
+          Icons.circle,
+          size: 5,
+        ),
+        SizedBox(
+          width: 10,
+        ),
+        Text(
+          label,
+          style: TextStyle(fontSize: 12),
+        )
       ],
     );
   }
 }
-

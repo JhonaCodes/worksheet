@@ -1,15 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:worksheet/src/common/ui/widget/text_field_value_widget.dart';
 
-class LoginView extends StatefulWidget {
-  const LoginView({super.key});
+class UpdatePasswordView extends StatefulWidget {
+  const UpdatePasswordView({super.key});
 
   @override
-  State<LoginView> createState() => _LoginViewState();
+  State<UpdatePasswordView> createState() => _UpdatePasswordViewState();
 }
 
-class _LoginViewState extends State<LoginView> {
-  bool _isPasswordVisible = false;
+class _UpdatePasswordViewState extends State<UpdatePasswordView> {
+
+  bool _isPasswordVisible = true;
 
   @override
   Widget build(BuildContext context) {
@@ -33,29 +34,26 @@ class _LoginViewState extends State<LoginView> {
                   height: 10,
                 ),
                 Text(
-                  "Bienvenido a Bitácora Digital",
+                  "Cambiar contraseña",
                   style: Theme.of(context).textTheme.headlineMedium?.copyWith(
-                        fontWeight: FontWeight.w900,
-                      ),
+                    fontWeight: FontWeight.w900,
+                  ),
                 ),
                 Text(
-                  "Inicia sesión para continuar",
+                  "Ingresa y confirma tu nueva contraseña para continuar",
                   style: Theme.of(context).textTheme.titleMedium,
                 ),
                 const SizedBox(
                   height: 10,
                 ),
-                const TextFieldValue(
-                  hintText: "Correo electrónico",
-                  maxLines: 1,
-                ),
+
                 TextFieldValue(
-                  hintText: "Contraseña",
+                  hintText: "Confirmar contraseña",
                   maxLines: 1,
                   obscureText: _isPasswordVisible,
                   suffixIcon: IconButton(
                     onPressed: () => setState(
-                        () => _isPasswordVisible = !_isPasswordVisible),
+                            () => _isPasswordVisible = !_isPasswordVisible),
                     icon: Icon(
                       _isPasswordVisible
                           ? Icons.remove_red_eye
@@ -63,29 +61,23 @@ class _LoginViewState extends State<LoginView> {
                     ),
                   ),
                 ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.end,
-                  children: [
-                    TextButton(
-                      onPressed: () {},
-                      child: const Text(
-                        "¿Olvidaste tu contraseña?",
-                        style: TextStyle(color: Colors.blue),
-                      ),
-                    )
-                  ],
+
+                const TextFieldValue(
+                  hintText: "Nueva contraseña",
+                  maxLines: 1,
                 ),
+
                 const SizedBox(
-                  height: 10,
+                  height: 20,
                 ),
                 ElevatedButton(
                   child: Text(
-                    "Inciiar Sesíon",
+                    "Cambiar contraseña",
                     style: TextStyle(color: Colors.white),
                   ),
                   style: ButtonStyle(
                       backgroundColor:
-                          WidgetStatePropertyAll<Color>(Colors.indigo)),
+                      WidgetStatePropertyAll<Color>(Colors.indigo)),
                   onPressed: () {},
                 ),
                 const SizedBox(
@@ -94,16 +86,19 @@ class _LoginViewState extends State<LoginView> {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Text("¿No tienes una cuenta?"),
-                    TextButton(
+                    TextButton.icon(
                       onPressed: () {},
-                      child: const Text(
-                        "Regístrate aquí",
-                        style: TextStyle(color: Colors.blue),
+                      icon: Icon(
+                        Icons.arrow_back,
+                        color: Colors.indigo,
+                      ),
+                      label: Text(
+                        "Volver al inicio de sesión",
+                        style: TextStyle(color: Colors.indigo),
                       ),
                     )
                   ],
-                ),
+                )
               ],
             ),
           ),

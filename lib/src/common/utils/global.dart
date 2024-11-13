@@ -1,0 +1,25 @@
+import 'package:multiselect_field/core/multi_select.dart';
+
+final List<Choice<String>> jobRoles = [
+  Choice<String>("20", "Director General"),
+  Choice<String>("19", "Director de Ingeniería"),
+  Choice<String>("18", "Gerente de Proyectos"),
+  Choice<String>("17", "Ingeniero Senior"),
+  Choice<String>("16", "Ingeniero"),
+  Choice<String>("15", "Supervisor Técnico"),
+  Choice<String>("14", "Técnico Especialista"),
+  Choice<String>("13", "Técnico"),
+  Choice<String>("12", "Coordinador de Mantenimiento"),
+  Choice<String>("11", "Analista de Sistemas"),
+  Choice<String>("10", "Desarrollador"),
+  Choice<String>("09", "Operador"),
+  Choice<String>("08", "Asistente Técnico"),
+  Choice<String>("07", "Personal de Soporte"),
+  Choice<String>("06", "Contratista"),
+  Choice<String>("05", "Trabajador Autónomo"),
+  Choice<String>("04", "Practicante"),
+  Choice<String>("03", "Consultor Externo"),
+  Choice<String>("02", "Proveedor"),
+  Choice<String>("01", "Personal Administrativo"),
+  Choice<String>("00", "Otro"),
+];
