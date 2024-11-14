@@ -34,7 +34,8 @@ class MainLayout extends StatelessWidget {
         drawer: Drawer(),
         body: child,
         floatingActionButton: FloatingActionButton(
-          child: Icon(Icons.add),
+          backgroundColor: Colors.indigo,
+          child: Icon(Icons.add,color: Colors.white,),
           onPressed: () {},
         ),
       ),
